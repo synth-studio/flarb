@@ -259,7 +259,7 @@ debug-assertions = false
 
 <div align="center">
   
-  [![GitHub](https://img.shields.io/badge/GitHub-synth-studio-9945FF?style=for-the-badge&logo=github)](https://github.com/synth-studio)
+  [![GitHub](https://img.shields.io/badge/GitHub-synth_studio-9945FF?style=for-the-badge&logo=github)](https://github.com/synth-studio)
   [![Telegram](https://img.shields.io/badge/Telegram-@code__0110-9945FF?style=for-the-badge&logo=telegram)](https://t.me/code_0110)
   [![Email](https://img.shields.io/badge/Email-info@synthstudio.io-9945FF?style=for-the-badge&logo=gmail)](mailto:info@synthstudio.io)
   
