@@ -1,0 +1,16 @@
+..
+.cursorignore
+.cursorrules
+target/
+.env
+help.txt
+jito.txt
+tvu_jito_help.txt
+package-lock.json
+Cargo.lock
+pools/orca_pools.json
+pools/raydium_pools.json
+pools/tokens.json
+pools/pools.json
+jupiter-swap-api/cache
+backup

@@ -1,0 +1,89 @@
+[package]
+name = "flarb"
+version = "0.1.0"
+edition = "2021"
+authors = ["brahman"]
+description = "High Performance MEV Bot"
+keywords = ["solana", "defi", "mev", "trading", "blockchain"]
+categories = ["cryptography::cryptocurrencies", "finance"]
+repository = "https://github.com/Panda404NotFound"
+
+[lib]
+path = "src/lib.rs"
+
+[package.metadata.membership]
+include = ["src/**/*.rs"]
+auto-export = true
+exclude = []
+reexport = true
+
+[dependencies]
+log = "0.4.20"
+env_logger = "0.10.0"
+tracing = "0.1.39"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+dotenv = "0.15"
+
+lazy_static = "1.4"
+
+reqwest = { version = "0.11.23", features = ["json"] }
+serde = { version = "1.0.192", features = ["derive"] }
+serde_json = "1.0.133"
+anyhow = "1.0.76"
+url = "2.5.4"
+async-trait = "0.1.83"
+socket2 = "0.5.5"
+
+base64 = "0.22.0"
+zstd = "0.13.2"
+bytemuck = { version = "1.20", features = ["derive"] }
+dashmap = "6.1.0"
+petgraph = "0.6.0"
+
+tokio = { version = "1.36.0", features = ["full"] }
+tokio-tungstenite = { version = "0.24.0", features = ["native-tls"] }
+futures = "0.3.31"
+
+solana-client = "1.17"
+solana-program = "2.1.5"
+solana-sdk = "2.1.5"
+solana-ledger = "1.17"
+solana-perf = "1.17"
+spl-token = "7.0.0"
+anchor-lang = "0.30.1"
+anchor-spl = "0.30.1"
+
+jup-ag = "0.8.0"
+
+orca_whirlpools = "1.0.0"
+orca_whirlpools_client = "1.0.0"
+orca_whirlpools_core = "1.0.0"
+
+indicatif = "0.17.7"
+
+# Для оптимизации буферов и памяти
+bytes = "1.5.0"
+# Для эффективных SPSC каналов
+flume = "0.11.0"
+# Для параллельных вычислений
+rayon = "1.7.0"
+# Для эффективной работы с битовыми массивами
+bitvec = "1.0.1"
+# Для эффективной работы с хеш-таблицами
+hashbrown = { version = "0.14", features = ["raw"] }
+
+[profile.dev]
+debug = true
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
+debug = false
+debug-assertions = false
+
+[profile.release.package."*"]
+opt-level = 3
